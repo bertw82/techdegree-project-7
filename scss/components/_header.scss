@@ -1,0 +1,10 @@
+header {
+  background: $color-primary;
+  @include flexy($dir: row, $align: center, $just: space-around);
+  p {
+    display: none;
+    @include mq(med) {
+      display: initial;
+    }
+  }
+}

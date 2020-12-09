@@ -1,0 +1,4 @@
+nav {
+  background: $color-primary-dark;
+  @include flexy($dir: row, $align: center, $just: space-around)
+}
