@@ -2,4 +2,26 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 60px 70px 1fr;
+  @include mq(med) {
+    grid-template-rows: 70px 75px 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    grid-area: head;
+  }
+  nav {
+    grid-area: nav;
+  }
+  main {
+    grid-area: main;
+  }
+  .grid-container{
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: 
+      "head head"
+      "nav main";
+  }
 }

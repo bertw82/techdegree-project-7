@@ -345,7 +345,9 @@ template {
 h1 {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
+  margin-right: auto;
   color: #fff;
+  padding-left: 10px;
 }
 h1 span {
   font-weight: lighter;
@@ -365,7 +367,31 @@ h3 {
   grid-template-columns: 1fr;
   grid-template-rows: 60px 70px 1fr;
 }
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-rows: 70px 75px 1fr;
+  }
+}
 
+@media (min-width: 1024px) {
+  header {
+    grid-area: head;
+  }
+
+  nav {
+    grid-area: nav;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  .grid-container {
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: "head head" "nav main";
+  }
+}
 nav {
   background: #1d44b8;
   display: flex;
@@ -373,11 +399,18 @@ nav {
   justify-content: space-around;
   align-items: center;
 }
+@media (min-width: 1024px) {
+  nav {
+    flex-direction: column;
+    height: 100vh;
+  }
+}
 
-img[src*=bert-witzel] {
-  height: 30px;
-  width: 30px;
+img[src*=bwitzel] {
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
+  margin-right: 10px;
 }
 
 main {
@@ -388,7 +421,6 @@ header {
   background: royalblue;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   align-items: center;
 }
 header p {
@@ -397,7 +429,11 @@ header p {
 @media (min-width: 768px) {
   header p {
     display: initial;
+    padding-right: 10px;
   }
+}
+header svg {
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */

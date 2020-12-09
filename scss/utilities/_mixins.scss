@@ -12,6 +12,21 @@
   align-items: $align;
   }
 
+// Padding shortcut
+@mixin padding(
+  $pad: null,
+  $pt: null,
+  $pb: null,
+  $pl: null,
+  $pr: null,) {
+    padding: $pad;
+    padding-top: $pt;
+    padding-bottom: $pb;
+    padding-left: $pl;
+    padding-right: $pr;
+  }
+
+
 // Media Queries
 @mixin mq($break) {
   @if $break == sm {
@@ -28,3 +43,5 @@
     }
   }
  }
+
+

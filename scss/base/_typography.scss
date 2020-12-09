@@ -8,8 +8,9 @@
 h1 {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
-  // margin-right: auto;
+  margin-right: auto;
   color: $white;
+  @include padding($pl: 10px);
   span {
     font-weight: lighter;
     color: $white;
