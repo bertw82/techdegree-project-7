@@ -1,0 +1,25 @@
+@keyframes ring {
+  0% {
+    transform: rotate(10deg);
+  }
+  20% {
+    tranform: rotate(40deg);
+  }
+  40% {
+    transform: rotate(-40deg);
+  }
+  60% {
+    transform: rotate(40deg);
+  }
+  80% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#notify:hover {
+  cursor: pointer;
+  animation: ring .5s ease-out forwards;
+}

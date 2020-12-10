@@ -1,0 +1,50 @@
+form {
+  @include flexy($dir: row);
+  background: rgb(231, 230, 230);
+  border-top: 1px solid $color-border;
+  border-bottom:  1px solid $color-border;
+  position: relative;
+  @include mq(med) {
+    border-left: 1px solid $color-border;
+    flex-grow: 3;
+    justify-content: flex-end;
+  }
+  @include mq(lg) {
+    flex-grow: 10;
+  }
+}
+
+input {
+  padding: 10px;
+  margin: 15px 10px;
+  border: 1px solid $color-border;
+  border-radius: 5px;
+  flex-grow: 1;
+  @include mq(med) {
+    flex-grow: 0;
+    flex-basis: 350px;
+  }
+  @include mq(lg) {
+    flex-basis: 400px;
+  }
+}
+
+button[type="submit"] {
+  position: absolute;
+  background: transparent;
+  border-radius: 0 5px 5px 0;
+  height: 40px;
+  width: 50px;
+  right: 10px;
+  top: 15px;
+}
+
+button {
+  border: none;
+}
+
+.flex {
+  @include mq(med) {
+    @include flexy($dir: row);
+  }
+}

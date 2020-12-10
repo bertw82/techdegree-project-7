@@ -3,6 +3,6 @@ nav {
   @include flexy($dir: row, $align: center, $just: space-around);
   @include mq(lg) {
     flex-direction: column;
-    height: 100vh;
+    height: calc(100vh - 60px);
   }
 }

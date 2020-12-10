@@ -3,9 +3,10 @@ header {
   @include flexy($dir: row, $align: center);
   p {
     display: none;
+    color: $white;
     @include mq(med) {
       display: initial;
-      @include padding($pr: 10px);
+      padding-right: 10px;
     }
   }
   svg {

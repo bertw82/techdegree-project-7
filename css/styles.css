@@ -342,6 +342,11 @@ template {
   box-sizing: border-box;
 }
 
+body {
+  color: darkslategrey;
+  text-align: center;
+}
+
 h1 {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
@@ -356,6 +361,12 @@ h1 span {
 
 h2, p {
   font-family: "Raleway", sans-serif;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    flex-grow: 1;
+  }
 }
 
 h3 {
@@ -402,7 +413,7 @@ nav {
 @media (min-width: 1024px) {
   nav {
     flex-direction: column;
-    height: 100vh;
+    height: calc(100vh - 60px);
   }
 }
 
@@ -413,10 +424,6 @@ img[src*=bwitzel] {
   margin-right: 10px;
 }
 
-main {
-  background: red;
-}
-
 header {
   background: royalblue;
   display: flex;
@@ -425,6 +432,7 @@ header {
 }
 header p {
   display: none;
+  color: #fff;
 }
 @media (min-width: 768px) {
   header p {
@@ -434,6 +442,92 @@ header p {
 }
 header svg {
   margin-right: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  background: #e7e6e6;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+@media (min-width: 768px) {
+  form {
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    flex-grow: 3;
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 1024px) {
+  form {
+    flex-grow: 10;
+  }
+}
+
+input {
+  padding: 10px;
+  margin: 15px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  flex-grow: 1;
+}
+@media (min-width: 768px) {
+  input {
+    flex-grow: 0;
+    flex-basis: 350px;
+  }
+}
+@media (min-width: 1024px) {
+  input {
+    flex-basis: 400px;
+  }
+}
+
+button[type=submit] {
+  position: absolute;
+  background: transparent;
+  border-radius: 0 5px 5px 0;
+  height: 40px;
+  width: 50px;
+  right: 10px;
+  top: 15px;
+}
+
+button {
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .flex {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(10deg);
+  }
+  20% {
+    tranform: rotate(40deg);
+  }
+  40% {
+    transform: rotate(-40deg);
+  }
+  60% {
+    transform: rotate(40deg);
+  }
+  80% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+#notify:hover {
+  cursor: pointer;
+  animation: ring 0.5s ease-out forwards;
 }
 
 /*# sourceMappingURL=styles.css.map */
