@@ -530,4 +530,9 @@ button {
   animation: ring 0.5s ease-out forwards;
 }
 
+.nav-icon {
+  width: 30px;
+  height: 30px;
+}
+
 /*# sourceMappingURL=styles.css.map */
