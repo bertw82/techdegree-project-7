@@ -403,6 +403,22 @@ h3 {
     grid-template-areas: "head head" "nav main";
   }
 }
+.main {
+  display: grid;
+}
+@media (min-width: 768px) {
+  .main {
+    grid-template-columns: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .traffic,
+.social-container {
+    grid-column: 1/span 2;
+  }
+}
+
 nav {
   background: #1d44b8;
   display: flex;
@@ -533,6 +549,13 @@ button {
 .nav-icon {
   width: 30px;
   height: 30px;
+}
+
+.social-image {
+  background: royalblue;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
 }
 
 /*# sourceMappingURL=styles.css.map */

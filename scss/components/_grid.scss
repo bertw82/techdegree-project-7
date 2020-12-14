@@ -25,3 +25,17 @@
       "nav main";
   }
 }
+
+.main {
+  display: grid;
+  @include mq(med) {
+    grid-template-columns: 50%;
+  } 
+}
+
+.traffic,
+.social-container {
+  @include mq(med) {
+    grid-column: 1 / span 2;
+  }
+}
