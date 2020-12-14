@@ -403,11 +403,11 @@ h3 {
     grid-template-areas: "head head" "nav main";
   }
 }
-.main {
+main {
   display: grid;
 }
 @media (min-width: 768px) {
-  .main {
+  main {
     grid-template-columns: 50%;
   }
 }
@@ -416,6 +416,22 @@ h3 {
   .traffic,
 .social-container {
     grid-column: 1/span 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .daily,
+.members,
+.message {
+    grid-column: 1/span 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile,
+.activity,
+.settings {
+    grid-column: 2/span 1;
   }
 }
 
@@ -515,9 +531,10 @@ button {
 }
 
 @media (min-width: 768px) {
-  .flex {
+  .search-input {
     display: flex;
     flex-direction: row;
+    grid-column: 1/span 2;
   }
 }
 

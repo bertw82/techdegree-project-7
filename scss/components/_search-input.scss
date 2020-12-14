@@ -43,8 +43,9 @@ button {
   border: none;
 }
 
-.flex {
+.search-input {
   @include mq(med) {
     @include flexy($dir: row);
+    grid-column: 1 / span 2;
   }
 }

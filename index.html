@@ -30,7 +30,7 @@
     </nav>
 
     <main>
-      <div class="flex">
+      <div class="search-input">
         <h2>Dashboard</h2>
         <form>
           <input type="text" id="search" name="user_search" placeholder="Search">
@@ -65,6 +65,14 @@
         <h3>Daily Traffic</h3>
         <div class="widget-container-half">
           <canvas id="daily-chart"></canvas>
+        </div>
+      </section>
+
+      <!-- doughnut chart -->
+      <section class="mobile">
+        <h3>Mobile Users</h3>
+        <div class="widget-container-half">
+          <canvas id="mobile-chart"></canvas>
         </div>
       </section>
 
@@ -142,7 +150,7 @@
       </section>
 
        <!-- recent activity widget -->
-       <section class="members">
+       <section class="activity">
         <h3>Recent Activity</h3>
         <div class="members-container">
           <img src="images/member-1.jpg" class="profile-image">
