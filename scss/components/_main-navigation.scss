@@ -1,8 +1,16 @@
 nav {
-  background: $color-primary-dark;
+  background: $color-secondary;
   @include flexy($dir: row, $align: center, $just: space-around);
   @include mq(lg) {
     flex-direction: column;
-    height: calc(100vh - 60px);
+    justify-content: flex-start;
+  }
+}
+
+.nav-icon {
+  width: 30px;
+  height: 30px;
+  @include mq(lg) {
+    margin-top: 40px;
   }
 }

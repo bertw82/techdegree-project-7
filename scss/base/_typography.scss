@@ -34,6 +34,13 @@ h2 {
 
 h3 {
   font-family: 'Oswald', sans-serif;
+  .traffic-header & {
+    @include mq(med) {
+    line-height: normal;
+    margin-right: auto;
+    margin-left: 20px;
+    }
+  }
 }
 
 
