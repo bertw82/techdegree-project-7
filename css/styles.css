@@ -598,7 +598,7 @@ button {
   width: 95vw;
 }
 
-@media (min-width) {
+@media (min-width: 768px) {
   .widget-container-full {
     width: 90vw;
   }

@@ -13,3 +13,21 @@ alertBanner.addEventListener('click', (e) => {
     alertBanner.style.display = "none"
     }
 })
+
+const trafficCanvas = document.getElementById('traffic-chart');
+
+let trafficData = {
+  labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
+            "4-10", "11-17", "18-24", "25-31"],
+  datasets: [{
+    data: [500, 1000, 1500, 2000, 2500],
+    backgroundColor: 'rgba(116, 119, 191, .3)',
+    borderWidth: 1,
+  }]
+}
+
+let trafficChart = new Chart(trafficCanvas, {
+  type: 'line',
+  data: trafficData
+  // options: trafficOptions
+});
