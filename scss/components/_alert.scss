@@ -1,0 +1,12 @@
+.alert-banner {
+  background: $color-primary;
+  @include flexy($just: space-between);
+  p {
+    color: $white;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &-close {
+    font-weight: 900;
+  }
+}

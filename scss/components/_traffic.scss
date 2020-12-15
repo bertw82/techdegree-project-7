@@ -1,0 +1,15 @@
+.traffic-link {
+  padding: 10px;
+}
+
+.traffic-nav {
+  list-style-type: none;
+  padding-left: 0;
+  @include flexy($just: space-around,);
+}
+
+.traffic-header {
+  @include mq(med) {
+    @include flexy;
+  }
+}

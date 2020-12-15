@@ -414,7 +414,8 @@ main {
 
 @media (min-width: 768px) {
   .traffic,
-.social-container {
+.social-container,
+#alert {
     grid-column: 1/span 2;
   }
 }
@@ -454,6 +455,23 @@ img[src*=bwitzel] {
   width: 35px;
   border-radius: 50%;
   margin-right: 10px;
+}
+
+.traffic-link {
+  padding: 10px;
+}
+
+.traffic-nav {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  .traffic-header {
+    display: flex;
+  }
 }
 
 header {
@@ -573,6 +591,45 @@ button {
   border-radius: 50%;
   width: 75px;
   height: 75px;
+}
+
+.widget-container-full,
+.widget-container-half {
+  width: 95vw;
+}
+
+@media (min-width) {
+  .widget-container-full {
+    width: 90vw;
+  }
+
+  .widget-container-half {
+    width: 45vw;
+  }
+}
+.alert-banner {
+  background: royalblue;
+  display: flex;
+  justify-content: space-between;
+}
+.alert-banner p {
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.alert-banner-close {
+  font-weight: 900;
+}
+
+.social-flex {
+  display: flex;
+  padding: 10px;
+  margin: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.social-text {
+  padding-left: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */

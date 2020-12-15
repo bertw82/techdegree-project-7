@@ -1,0 +1,11 @@
+.social-flex {
+  @include flexy;
+  padding: 10px;
+  margin: 20px;
+  border: 1px solid $color-border;
+}
+
+.social-text {
+  padding-left: 20px;
+  
+}

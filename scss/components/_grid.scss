@@ -34,7 +34,8 @@ main {
 }
 
 .traffic,
-.social-container {
+.social-container,
+#alert {
   @include mq(med) {
     grid-column: 1 / span 2;
   }
