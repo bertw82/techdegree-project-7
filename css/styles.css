@@ -345,10 +345,10 @@ template {
 body {
   color: darkslategrey;
   text-align: center;
+  font-family: "Raleway", sans-serif;
 }
 
 h1 {
-  font-family: "Raleway", sans-serif;
   font-weight: bold;
   margin-right: auto;
   color: #fff;
@@ -359,10 +359,6 @@ h1 span {
   color: #fff;
 }
 
-h2, p {
-  font-family: "Raleway", sans-serif;
-}
-
 @media (min-width: 768px) {
   h2 {
     flex-grow: 1;
@@ -371,6 +367,7 @@ h2, p {
 
 h3 {
   font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
 }
 @media (min-width: 768px) {
   .traffic-header h3 {
@@ -485,6 +482,12 @@ img[src*=bwitzel] {
   width: 35px;
   border-radius: 50%;
   margin-right: 10px;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .traffic-link {
@@ -687,6 +690,37 @@ header svg {
     flex-wrap: wrap;
     padding: 10px;
   }
+}
+
+.members-container {
+  width: 95%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+.members-container:nth-of-type(8n+4) {
+  width: 100%;
+  padding: 10px 10px 20px;
+}
+.members-container p {
+  font-size: 0.7rem;
+}
+
+.members-text {
+  font-size: 0.7rem;
+  margin-right: auto;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.members-text p {
+  margin-bottom: 0;
+}
+.members-text a {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
