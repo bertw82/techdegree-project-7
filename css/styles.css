@@ -379,7 +379,7 @@ h3 {
 
 .social-text p:first-child {
   font-weight: bold;
-  color: royalblue;
+  color: slateblue;
   margin: 0;
   text-align: left;
 }
@@ -508,7 +508,7 @@ img[src*=bwitzel] {
 }
 
 header {
-  background: royalblue;
+  background: slateblue;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -610,7 +610,7 @@ header svg {
 }
 
 .social-image {
-  background: royalblue;
+  background: slateblue;
   border-radius: 50%;
   width: 75px;
   height: 75px;
@@ -632,7 +632,7 @@ header svg {
   }
 }
 .alert-banner {
-  background: royalblue;
+  background: slateblue;
   margin: 10px;
   border-radius: 5px;
   display: flex;
