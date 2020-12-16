@@ -1,16 +1,16 @@
 .social-flex {
   @include flexy;
-  padding: 20px 20px 10px;
+  padding: 20px;
   margin: 10px;
   margin-top: 20px;
   border: $border;
   @include mq(med) {
-    margin: 20px;
-    width: 331px;
+    margin: 0 20px 20px 0;
+    flex-basis: 354px;
   }
   @include mq(lg) {
-    margin: 10px;
-    width: 288px;
+    margin: 0 10px 10px;
+    flex-basis: 285px;
   }
 }
 
@@ -21,6 +21,9 @@
 .social {
   @include mq(med) {
     @include flexy($wrap: wrap);
-    padding: 10px;
+    padding-left: 20px;
+  }
+  @include mq(lg) {
+    padding-left: 10px;
   }
 }

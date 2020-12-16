@@ -376,6 +376,11 @@ h3 {
     margin-left: 20px;
   }
 }
+.daily h3, .mobile h3, .social-container h3, .members h3, .activity h3 {
+  text-align: left;
+  margin-left: 20px;
+  padding: 10px 0;
+}
 
 .social-text p:first-child {
   font-weight: bold;
@@ -386,8 +391,8 @@ h3 {
 .social-text p:nth-of-type(2) {
   font-size: 2rem;
   font-family: sans-serif;
-  font-size: 3rem;
-  margin: 0;
+  font-size: 2.625rem;
+  margin: 10px 0 0;
 }
 
 .grid-container {
@@ -490,17 +495,26 @@ img[src*=bwitzel] {
   border-radius: 50%;
 }
 
+@media (min-width: 768px) {
+  .traffic {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+}
 .traffic-link {
   padding: 10px;
 }
-
 .traffic-nav {
   list-style-type: none;
   padding-left: 0;
   display: flex;
   justify-content: space-around;
 }
-
+@media (min-width: 768px) {
+  .traffic-nav {
+    margin-right: 20px;
+  }
+}
 @media (min-width: 768px) {
   .traffic-header {
     display: flex;
@@ -662,21 +676,21 @@ header svg {
 
 .social-flex {
   display: flex;
-  padding: 20px 20px 10px;
+  padding: 20px;
   margin: 10px;
   margin-top: 20px;
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 @media (min-width: 768px) {
   .social-flex {
-    margin: 20px;
-    width: 331px;
+    margin: 0 20px 20px 0;
+    flex-basis: 354px;
   }
 }
 @media (min-width: 1024px) {
   .social-flex {
-    margin: 10px;
-    width: 288px;
+    margin: 0 10px 10px;
+    flex-basis: 285px;
   }
 }
 
@@ -688,7 +702,12 @@ header svg {
   .social {
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .social {
+    padding-left: 10px;
   }
 }
 
@@ -721,6 +740,21 @@ header svg {
 }
 .members-text a {
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .daily {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding-bottom: 20px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

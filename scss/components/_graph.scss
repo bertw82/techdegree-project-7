@@ -1,0 +1,14 @@
+.daily {
+  @include mq(med) {
+    border-bottom: $border;
+    border-right: $border;
+    padding-bottom: 20px;
+  }
+}
+
+.mobile {
+  @include mq(med) {
+    border-bottom: $border;
+    padding-bottom: 20px;
+  }
+}

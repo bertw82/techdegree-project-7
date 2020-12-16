@@ -1,15 +1,23 @@
-.traffic-link {
-  padding: 10px;
-}
-
-.traffic-nav {
-  list-style-type: none;
-  padding-left: 0;
-  @include flexy($just: space-around,);
-}
-
-.traffic-header {
+.traffic {
   @include mq(med) {
-    @include flexy;
+    padding-bottom: 20px;
+    border-bottom: $border;
+  }
+  &-link {
+    padding: 10px;
+  }
+  &-nav {
+    list-style-type: none;
+    padding-left: 0;
+    @include flexy($just: space-around,);
+    @include mq(med) {
+      margin-right: 20px;
+    }
+  }
+  &-header {
+    @include mq(med) {
+      @include flexy;
+    }
   }
 }
+
