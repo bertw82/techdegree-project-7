@@ -380,6 +380,19 @@ h3 {
   }
 }
 
+.social-text p:first-child {
+  font-weight: bold;
+  color: royalblue;
+  margin: 0;
+  text-align: left;
+}
+.social-text p:nth-of-type(2) {
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-size: 3rem;
+  margin: 0;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -603,6 +616,7 @@ header svg {
 .widget-container-full,
 .widget-container-half {
   width: 95vw;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -616,13 +630,28 @@ header svg {
 }
 .alert-banner {
   background: royalblue;
+  margin: 10px;
+  border-radius: 5px;
   display: flex;
   justify-content: space-between;
 }
+@media (min-width: 768px) {
+  .alert-banner {
+    margin: 20px;
+  }
+}
 .alert-banner p {
   color: #fff;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.alert-banner p:first-child {
+  width: 250px;
+}
+@media (min-width: 768px) {
+  .alert-banner p:first-child {
+    width: initial;
+  }
 }
 .alert-banner-close {
   font-weight: 900;
@@ -630,13 +659,34 @@ header svg {
 
 .social-flex {
   display: flex;
-  padding: 10px;
-  margin: 20px;
+  padding: 20px 20px 10px;
+  margin: 10px;
+  margin-top: 20px;
   border: 1px solid rgba(0, 0, 0, 0.3);
+}
+@media (min-width: 768px) {
+  .social-flex {
+    margin: 20px;
+    width: 331px;
+  }
+}
+@media (min-width: 1024px) {
+  .social-flex {
+    margin: 10px;
+    width: 288px;
+  }
 }
 
 .social-text {
   padding-left: 20px;
+}
+
+@media (min-width: 768px) {
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -43,4 +43,19 @@ h3 {
   }
 }
 
+p {
+  .social-text &:first-child {
+    font-weight: bold;
+    color: $color-primary;
+    margin: 0;
+    text-align: left;
+  }
+  .social-text &:nth-of-type(2) {
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-size: 3rem;
+    margin: 0;
+  }
+}
+
 
