@@ -43,9 +43,27 @@ h3 {
   .social-container &,
   .members &,
   .activity & {
-    text-align: left;
-    margin-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    @include mq(med) {
     padding: 10px 0;
+    text-align: left;
+    margin-left: 20px;   
+    }
+  }
+  .daily &,
+  .mobile &,
+  .social-container &,
+  .members &,
+  .settings & {
+    &::before {
+      content: "";
+      border: $border;
+      width: 90%;
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 20px;
+    }
   }
 }
 

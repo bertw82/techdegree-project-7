@@ -1,17 +1,8 @@
 .social-flex {
   @include flexy;
   padding: 20px;
-  margin: 10px;
-  margin-top: 20px;
   border: $border;
-  @include mq(med) {
-    margin: 0 20px 20px 0;
-    flex-basis: 354px;
-  }
-  @include mq(lg) {
-    margin: 0 10px 10px;
-    flex-basis: 285px;
-  }
+  background: $color-accent;
 }
 
 .social-text {
@@ -19,11 +10,27 @@
 }
 
 .social {
-  @include mq(med) {
-    @include flexy($wrap: wrap);
-    padding-left: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: 10px;
+  margin-right: 10px;
+  grid-gap: 10px;
+  @include mq(med) {  
+    grid-template-columns: 1fr 1fr;
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-gap: 20px;
   }
   @include mq(lg) {
-    padding-left: 10px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &-container {
+    @include mq(med) {
+      padding-bottom: 20px;
+      border-bottom: $border;
+    }
+    @include mq(lg) {
+      padding-bottom: 40px;
+    }
   }
 }

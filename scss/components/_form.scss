@@ -1,6 +1,6 @@
 .dashboard-form {
   @include flexy($dir: row);
-  background: rgb(231, 230, 230);
+  background: $color-accent;
   border-top: $border;
   border-bottom:  $border;
   position: relative;
@@ -25,18 +25,6 @@
     @include mq(lg) {
       flex-basis: 400px;
     }
-  }
-  
-  button {
-    position: absolute;
-    background: transparent;
-    border-radius: 0 5px 5px 0;
-    height: 40px;
-    width: 50px;
-    right: 10px;
-    top: 15px;
-    border: none;
-    cursor: pointer;
   }
 }
 
