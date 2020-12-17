@@ -55,14 +55,24 @@ h3 {
   .mobile &,
   .social-container &,
   .members &,
-  .settings & {
-    &::before {
-      content: "";
-      border: $border;
-      width: 90%;
-      margin: 0 auto;
-      display: block;
-      margin-bottom: 20px;
+  .settings &,
+  .message &,
+  .activity & {
+    @include mq(sm) {
+      &::before {
+        content: "";
+        border: $border;
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .members &,
+  .activity & {
+    @include mq(sm) {
+      margin-bottom: 0;
     }
   }
 }
