@@ -588,6 +588,7 @@ header svg {
   right: 10px;
   top: 15px;
   border: none;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -672,6 +673,7 @@ header svg {
 }
 .alert-banner-close {
   font-weight: 900;
+  cursor: pointer;
 }
 
 .social-flex {

@@ -3,7 +3,7 @@ const alertBanner = document.getElementById('alert');
 alertBanner.innerHTML = `
                         <div class="alert-banner">
                           <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to perform</p>
-                          <p class="alert-banner-close"><strong>X</strong></p>
+                          <p class="alert-banner-close">X</p>
                         </div>
                         `;
 

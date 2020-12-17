@@ -36,10 +36,9 @@
     right: 10px;
     top: 15px;
     border: none;
+    cursor: pointer;
   }
 }
-
-
 
 .search-input {
   @include mq(med) {
