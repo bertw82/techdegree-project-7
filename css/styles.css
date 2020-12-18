@@ -377,12 +377,10 @@ h3 {
   }
 }
 .daily h3, .mobile h3, .social-container h3, .members h3, .activity h3 {
-  padding-top: 20px;
-  padding-bottom: 10px;
+  padding: 10px 0;
 }
 @media (min-width: 768px) {
   .daily h3, .mobile h3, .social-container h3, .members h3, .activity h3 {
-    padding: 10px 0;
     text-align: left;
     margin-left: 20px;
   }
@@ -397,10 +395,8 @@ h3 {
     margin-bottom: 20px;
   }
 }
-@media (max-width: 767px) {
-  .members h3, .activity h3 {
-    margin-bottom: 0;
-  }
+.members h3, .activity h3 {
+  margin-bottom: 0;
 }
 
 .social-text p:first-child {
@@ -583,10 +579,10 @@ header svg {
   }
 }
 .dashboard-form input {
-  padding: 10px;
   margin: 15px 10px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 5px;
+  padding: 10px;
   flex-grow: 1;
 }
 @media (min-width: 768px) {
@@ -601,6 +597,26 @@ header svg {
   }
 }
 
+.widget-container {
+  margin: 0 auto;
+}
+.widget-container input {
+  width: 90%;
+  margin: 10px;
+  background: whitesmoke;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 10px;
+}
+.widget-container textarea {
+  width: 90%;
+  height: 150px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 10px;
+  background: whitesmoke;
+}
+
 @media (min-width: 768px) {
   .search-input {
     display: flex;
@@ -611,19 +627,19 @@ header svg {
 
 @keyframes ring {
   0% {
-    transform: rotate(10deg);
+    transform: rotate(0deg);
   }
-  20% {
-    tranform: rotate(40deg);
+  10% {
+    tranform: rotate(45deg);
   }
-  40% {
-    transform: rotate(-40deg);
+  30% {
+    transform: rotate(-45deg);
   }
   60% {
-    transform: rotate(40deg);
+    transform: rotate(45deg);
   }
-  80% {
-    transform: rotate(-40deg);
+  90% {
+    transform: rotate(-45deg);
   }
   100% {
     transform: rotate(0deg);
@@ -631,7 +647,7 @@ header svg {
 }
 #notify:hover {
   cursor: pointer;
-  animation: ring 0.5s ease-out forwards;
+  animation: ring 0.4s ease-out forwards;
 }
 
 .social-image {
@@ -752,7 +768,9 @@ header svg {
   font-size: 0.7rem;
 }
 .members-container p[class=arrow] {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  color: #4333a8;
+  cursor: pointer;
 }
 .members-text {
   font-size: 0.7rem;
@@ -767,6 +785,11 @@ header svg {
   margin-bottom: 0;
   margin-top: 0;
   font-size: 0.7rem;
+}
+@media (min-width: 1024px) {
+  .members-text p {
+    font-size: 0.8rem;
+  }
 }
 .members-text a {
   text-decoration: none;
@@ -807,6 +830,14 @@ header svg {
   top: 15px;
   border: none;
   cursor: pointer;
+}
+.widget-container button {
+  color: #fff;
+  background: slateblue;
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=styles.css.map */

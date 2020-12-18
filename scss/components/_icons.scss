@@ -1,18 +1,18 @@
 @keyframes ring {
   0% {
-    transform: rotate(10deg);
+    transform: rotate(0deg);
   }
-  20% {
-    tranform: rotate(40deg);
+  10% {
+    tranform: rotate(45deg);
   }
-  40% {
-    transform: rotate(-40deg);
+  30% {
+    transform: rotate(-45deg);
   }
   60% {
-    transform: rotate(40deg);
+    transform: rotate(45deg);
   }
-  80% {
-    transform: rotate(-40deg);
+  90% {
+    transform: rotate(-45deg);
   }
   100% {
     transform: rotate(0deg);
@@ -21,7 +21,7 @@
 
 #notify:hover {
   cursor: pointer;
-  animation: ring .5s ease-out forwards;
+  animation: ring .4s ease-out forwards;
 }
 
 .social-image {

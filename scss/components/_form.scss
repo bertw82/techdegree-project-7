@@ -13,10 +13,8 @@
     flex-grow: 10;
   }
   input {
-    padding: 10px;
     margin: 15px 10px;
-    border: $border;
-    border-radius: 5px;
+    @include form-border;
     flex-grow: 1;
     @include mq(med) {
       flex-grow: 0;
@@ -25,6 +23,22 @@
     @include mq(lg) {
       flex-basis: 400px;
     }
+  }
+}
+
+.widget-container {
+  margin: 0 auto;
+  input {
+    width: 90%;
+    margin: 10px;
+    background: $color-accent;
+    @include form-border;
+  }
+  textarea {
+    width: 90%;
+    height: 150px;
+    @include form-border;
+    background: $color-accent;
   }
 }
 
