@@ -10,13 +10,39 @@ button {
     border: none;
     cursor: pointer;
   }
-  .widget-container & {
-    color: $white;
-    background: $color-primary;
+  .widget-container & {  
     width: 90%;
-    padding: 10px;
     margin: 10px;
-    border-radius: 5px;
+  }
+}
+
+.settings-button {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  width: 90%;
+  margin: 13px auto;
+}
+
+.button-primary,
+.button-disabled {
+  padding: 15px;
+  color: $white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-primary {
+  background-color: $color-primary;
+  &:hover {
+    background-color: $color-primary-light;
+  }
+}
+
+.button-disabled {
+  background-color: $color-button;
+  &:hover {
+    background-color: $color-button-light;
   }
 }
 

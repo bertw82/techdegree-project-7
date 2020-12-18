@@ -30,7 +30,7 @@
   margin: 0 auto;
   input {
     width: 90%;
-    margin: 10px;
+    margin: 0 10px 10px;
     background: $color-accent;
     @include form-border;
   }
@@ -47,4 +47,10 @@
     @include flexy($dir: row);
     grid-column: 1 / span 2;
   }
+}
+
+.form-field {
+  width: 90%;
+  margin-top: 17px;
+  @include form-border;
 }

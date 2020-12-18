@@ -42,7 +42,9 @@ h3 {
   .mobile &,
   .social-container &,
   .members &,
-  .activity & {
+  .activity &,
+  .message &,
+  .settings & {
     padding: 10px 0;
     @include mq(med) {
     text-align: left;
