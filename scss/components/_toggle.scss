@@ -1,0 +1,16 @@
+.toggle-flex {
+  display: grid;
+  grid-template-columns: 1fr 85px;
+  margin: 20px;
+  align-items: center;
+  @include mq(med) {
+    width: 75%;
+  }
+  @include mq(lg) {
+    width: 65%;
+  }
+  p {
+    text-align: left;
+  }
+
+}

@@ -17,12 +17,16 @@
   main {
     grid-area: main;
   }
+  footer {
+    grid-area: footer;
+  }
   .grid-container{
     grid-template-columns: 80px 1fr;
     grid-template-rows: 60px 1fr;
     grid-template-areas: 
       "head head"
-      "nav main";
+      "nav main"
+      "nav footer";
   }
 }
 
