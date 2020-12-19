@@ -8,15 +8,12 @@ g.addEventListener('click', () => {
 })
 
 dropDown.addEventListener('click', (e) => { 
-  const p = document.querySelectorAll('#dropDown li p');
-  const dropLi = document.querySelectorAll('#dropDown li');
-  
-  for ( let i = 0; i < p.length; i++) {
-    p.parentNode.className = 'hide';
-    // let li = dropLi[i];  
-    // if (e.target === p) {
-    //   dropLi.className = 'hide';
-    // }
+  const button = document.querySelectorAll('.list-item button');
+  for ( let i = 0; i < button.length; i++) {
+    if (e.target === button[i]) {
+      button[i].classList.remove('list-item');
+      button[i].parentNode.className = 'hide';
+    }
   }
 })
 

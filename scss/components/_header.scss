@@ -50,11 +50,11 @@ header {
   :last-child {
     border: none;
   }
-  li {
+  .list-item {
     border-bottom: $border;
-    
+    width: 278px;
     @include flexy($just: space-between);
-    p {
+    button {
       color: $color-text;
       padding: 10px;
       margin: 10px;
@@ -63,12 +63,12 @@ header {
       color: $color-text;
       padding: 20px 16px 0;
     }
-    p:hover {
+    button:hover {
       background: $color-button;
       border-radius: 5px;
       color: $white;
     }
-    p:active {
+    button:active {
       background: $color-button-light;
     }
   }

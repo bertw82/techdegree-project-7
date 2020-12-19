@@ -588,26 +588,27 @@ header g {
 .dropdown-content :last-child {
   border: none;
 }
-.dropdown-content li {
+.dropdown-content .list-item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  width: 278px;
   display: flex;
   justify-content: space-between;
 }
-.dropdown-content li p {
+.dropdown-content .list-item button {
   color: darkslategrey;
   padding: 10px;
   margin: 10px;
 }
-.dropdown-content li span {
+.dropdown-content .list-item span {
   color: darkslategrey;
   padding: 20px 16px 0;
 }
-.dropdown-content li p:hover {
+.dropdown-content .list-item button:hover {
   background: seagreen;
   border-radius: 5px;
   color: #fff;
 }
-.dropdown-content li p:active {
+.dropdown-content .list-item button:active {
   background: #44c17b;
 }
 
