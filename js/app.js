@@ -11,7 +11,7 @@ dropDown.addEventListener('click', (e) => {
   const button = document.querySelectorAll('.list-item button');
   for ( let i = 0; i < button.length; i++) {
     if (e.target === button[i]) {
-      button[i].classList.remove('list-item');
+      button[i].parentNode.classList.remove('list-item');
       button[i].parentNode.className = 'hide';
     }
   }
@@ -29,7 +29,7 @@ alertBanner.innerHTML = `
 alertBanner.addEventListener('click', (e) => {
   const element = e.target;
   if (element.classList.contains("alert-banner-close")) {
-    alertBanner.style.display = "none"
+    alertBanner.style.opacity = '0';
     }
 })
 
