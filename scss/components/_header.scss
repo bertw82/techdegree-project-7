@@ -1,7 +1,7 @@
 header {
   background: $color-primary;
   @include flexy($dir: row, $align: center);
-  p {
+  > p {
     display: none;
     color: $white;
     @include mq(med) {
@@ -9,7 +9,68 @@ header {
       padding-right: 10px;
     }
   }
-  svg {
-    margin-right: 10px;
+  g {
+    margin-right: 20px;
+    padding-right:  20px;
+    border-right: $border;
+    position: relative;
   }
+}
+
+.ping:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $color-button-light;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  list-style-type: none;
+  background-color: $color-accent;
+  // overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 0;
+  border: $border;
+  @include mq(sm) {
+    left: 17px;
+    top: 37px;
+  }
+  @include mq(med) {
+    right: 156px;
+    top: 45px;
+  }
+  @include mq(lg) {
+    top: 40px;
+  }
+  :last-child {
+    border: none;
+  }
+  li {
+    border-bottom: $border;
+    
+    @include flexy($just: space-between);
+    p {
+      color: $color-text;
+      padding: 10px;
+      margin: 10px;
+    }
+    span {
+      color: $color-text;
+      padding: 20px 16px 0;
+    }
+    p:hover {
+      background: $color-button;
+      border-radius: 5px;
+      color: $white;
+    }
+    p:active {
+      background: $color-button-light;
+    }
+  }
+ 
 }

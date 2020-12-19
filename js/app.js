@@ -1,3 +1,11 @@
+const notify = document.getElementById('notify');
+const g = document.querySelector('.ping');
+g.addEventListener('click', () => { 
+  g.classList.remove('ping');
+  const dropDown = document.getElementById('dropDown');
+  dropDown.style.display = 'initial';
+})
+
 const alertBanner = document.getElementById('alert');
 
 alertBanner.innerHTML = `

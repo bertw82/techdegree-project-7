@@ -13,11 +13,19 @@
   <div class="grid-container">
     <header>
       <h1>Your<span>App&#8482;</span></h1>
-      <svg id="notify" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 32 32">
-        <path d="M24 18v-8c0-5.5-4.5-10-10-10S4 4.5 4 10v8l-4 8h9.1c.5 2.3 2.5 4 4.9 
-        4s4.4-1.7 4.9-4H28l-4-8zM14 28c-1.3 0-2.4-.8-2.8-2h5.6c-.4 1.2-1.5 2-2.8 2zM3 
-        24l3-6v-8c0-4.4 3.6-8 8-8s8 3.6 8 8v8l3 6H3z" fill="#fff"/>
-      </svg>
+      <g class="ping">
+        <svg id="notify" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 32 32">
+          <path d="M24 18v-8c0-5.5-4.5-10-10-10S4 4.5 4 10v8l-4 8h9.1c.5 2.3 2.5 4 4.9 
+          4s4.4-1.7 4.9-4H28l-4-8zM14 28c-1.3 0-2.4-.8-2.8-2h5.6c-.4 1.2-1.5 2-2.8 2zM3 
+          24l3-6v-8c0-4.4 3.6-8 8-8s8 3.6 8 8v8l3 6H3z" fill="#fff"/>
+        </svg>
+      </g>
+      <!-- dropdown menu -->
+      <ul id="dropDown" class="dropdown-content">
+        <li><span>You have 6 new messages</span><p>X</p></li>
+        <li><span>You have 3 new followers</span><p>X</p></li>
+        <li><span>You have 10 new visits</span><p>X</p></li>
+      </ul>
       <img src="images/bwitzel.jpg" alt="photo of Bert Witzel">
       <p>Bert Witzel</p>
     </header>

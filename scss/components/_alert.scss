@@ -11,7 +11,7 @@
     padding-left: 20px;
     padding-right: 20px;
     &:first-child {
-      width: 250px;
+      width: 80%;
       @include mq(med) {
         width: initial;
       }
