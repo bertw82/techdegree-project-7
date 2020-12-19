@@ -611,6 +611,10 @@ header g {
   background: #44c17b;
 }
 
+.hide {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .search-input {
     display: flex;

@@ -1,9 +1,23 @@
 const notify = document.getElementById('notify');
+const dropDown = document.getElementById('dropDown');
 const g = document.querySelector('.ping');
+
 g.addEventListener('click', () => { 
   g.classList.remove('ping');
-  const dropDown = document.getElementById('dropDown');
   dropDown.style.display = 'initial';
+})
+
+dropDown.addEventListener('click', (e) => { 
+  const p = document.querySelectorAll('#dropDown li p');
+  const dropLi = document.querySelectorAll('#dropDown li');
+  
+  for ( let i = 0; i < p.length; i++) {
+    p.parentNode.className = 'hide';
+    // let li = dropLi[i];  
+    // if (e.target === p) {
+    //   dropLi.className = 'hide';
+    // }
+  }
 })
 
 const alertBanner = document.getElementById('alert');
