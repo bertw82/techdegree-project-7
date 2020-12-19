@@ -1,3 +1,11 @@
+// dashboard search input
+.search-input {
+  @include mq(med) {
+    @include flexy($dir: row);
+    grid-column: 1 / span 2;
+  }
+}
+
 .dashboard-form {
   @include flexy($dir: row);
   background: $color-accent;
@@ -26,6 +34,7 @@
   }
 }
 
+// message section input and textarea
 .widget-container {
   margin: 0 auto;
   input {
@@ -39,13 +48,6 @@
     height: 150px;
     @include form-border;
     background: $color-accent;
-  }
-}
-
-.search-input {
-  @include mq(med) {
-    @include flexy($dir: row);
-    grid-column: 1 / span 2;
   }
 }
 
