@@ -76,7 +76,7 @@ let trafficChart = new Chart(trafficCanvas, {
 // add new data to line graph
 const trafficNav = document.getElementById('trafficNav');
 
-trafficNav.addEventListener('click', () => {
+trafficNav.addEventListener('click', (e) => {
   function addData(chart, data) {
     chart.data.datasets.forEach((dataset) => {
         dataset.data.push(data);
@@ -93,7 +93,7 @@ trafficNav.addEventListener('click', () => {
 
   const trafficButton = document.querySelectorAll('.traffic-link button');
   for (let i = 0; i < trafficButton.length; i++) {
-    if (trafficButton[i] === chartUpdate[i]) {
+    if (trafficButton[i] === e.target) {
       addData(trafficChart, chartUpdate[i]);
     }
   }
