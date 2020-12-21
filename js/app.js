@@ -29,7 +29,7 @@ alertBanner.innerHTML = `
 alertBanner.addEventListener('click', (e) => {
   const element = e.target;
   if (element.classList.contains("alert-banner-close")) {
-    alertBanner.style.opacity = '0';
+    alertBanner.style.display = 'none';
     }
 })
 
@@ -71,6 +71,32 @@ let trafficChart = new Chart(trafficCanvas, {
   type: 'line',
   data: trafficData,
   options: trafficOptions
+});
+
+// add new data to line graph
+const trafficNav = document.getElementById('trafficNav');
+
+trafficNav.addEventListener('click', () => {
+  function addData(chart, data) {
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(data);
+    });
+    chart.update();
+  }
+
+  const chartUpdate = [
+    [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
+    [1000, 600, 2000, 2225, 500, 750, 1250, 1000, 2250, 700, 7500],
+    [400, 550, 1250, 600, 750, 2250, 2000, 1900, 1800, 1000, 600],
+    [1250, 770, 600, 2300, 2000, 350, 400, 700, 1000, 1250, 900],
+  ];
+
+  const trafficButton = document.querySelectorAll('.traffic-link button');
+  for (let i = 0; i < trafficButton.length; i++) {
+    if (trafficButton[i] === chartUpdate[i]) {
+      addData(trafficChart, chartUpdate[i]);
+    }
+  }
 });
 
 const dailyCanvas = document.getElementById('daily-chart');

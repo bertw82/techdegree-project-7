@@ -947,6 +947,20 @@ header g {
   width: 90%;
   margin: 10px;
 }
+.traffic-link button {
+  background: transparent;
+  border: none;
+  color: darkslategrey;
+  padding: 10px;
+}
+.traffic-link button:hover {
+  background: seagreen;
+  color: #fff;
+  border-radius: 10px;
+}
+.traffic-link button:active {
+  background: #44c17b;
+}
 
 .settings-button {
   display: grid;
