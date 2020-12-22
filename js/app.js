@@ -88,6 +88,8 @@ function addData(chart, data) {
 }
 
 trafficNav.addEventListener('click', (e) => {
+  const trafficButton = document.querySelectorAll('.traffic-link button');
+
   const chartUpdate = [
     [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
     [1000, 600, 2000, 2225, 1250, 750, 1250, 1000, 2250, 700, 2500],
@@ -95,10 +97,15 @@ trafficNav.addEventListener('click', (e) => {
     [1250, 770, 600, 2300, 2000, 1250, 900, 700, 1000, 1250, 900],
   ];
 
-  const trafficButton = document.querySelectorAll('.traffic-link button');
   for (let i = 0; i < trafficButton.length; i++) {
     if (trafficButton[i] === e.target) { 
+      for (let i = 0; i < trafficButton.length; i++) {
+        trafficButton[i].classList.remove('button-background');
+      };
       addData(trafficChart, chartUpdate[i]);
+      trafficButton[i].className = 'button-background';
+      } else if (trafficButton[i] !== e.target) {
+      trafficButton[i].className = 'traffic-button';
     }
   }
 });

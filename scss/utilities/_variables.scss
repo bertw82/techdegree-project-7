@@ -5,6 +5,7 @@ $color-primary-dark: darken($color-primary, 15%);
 $color-primary-light: lighten($color-primary, 15%);
 $color-secondary: navy;
 $color-button: seagreen;
+$button-complement: complement($color-button);
 $color-button-light: lighten($color-button, 15%);
 $white: #fff;  
 $color-chart: rgba(108, 112, 224, 0.3);
