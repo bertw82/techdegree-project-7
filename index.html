@@ -213,8 +213,10 @@
       <!-- messaging widget -->
       <section class="message">
         <h3>Message User</h3>
-        <form class="widget-container">
-          <input type="text" placeholder="Search for user" class="form-field" id="userField">
+        <form class="widget-container" autocomplete="off" action="/action_page.php">
+          <div class="autocomplete">
+            <input id="myInput" type="text" placeholder="Search for user" class="form-field" id="userField">
+          </div>
           <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
           <button class="button-primary" id="send">Send</button>
         </form>
