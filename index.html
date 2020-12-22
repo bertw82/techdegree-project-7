@@ -22,19 +22,19 @@
       </g>
       <!-- dropdown menu -->
       <ul id="dropDown" class="dropdown-content">
-        <li class="list-item"><span>You have <strong>6</strong> new messages</span><button>X</button></li>
-        <li class="list-item"><span>You have <strong>3</strong> new followers</span><button>X</button></li>
-        <li class="list-item"><span>You have <strong>10</strong> new visits</span><button>X</button></li>
+        <li class="list-item"><p>You have 6 new messages</p><button>X</button></li>
+        <li class="list-item"><p>You have 3 new followers</p><button>X</button></li>
+        <li class="list-item"><p>You have 10 new visits</p><button>X</button></li>
       </ul>
       <img src="images/bwitzel.jpg" alt="photo of Bert Witzel">
       <p>Bert Witzel</p>
     </header>
 
     <nav>
-      <a class="nav-icon"><img src="icons/icon-dashboard.svg"></a>
-      <a class="nav-icon"><img src="icons/icon-members.svg"></a>
-      <a class="nav-icon"><img src="icons/icon-visits.svg"></a>
-      <a class="nav-icon"><img src="icons/icon-settings.svg"></a>
+      <a class="nav-icon" href="#top"><img src="icons/icon-dashboard.svg"></a>
+      <a class="nav-icon" href="#members"><img src="icons/icon-members.svg"></a>
+      <a class="nav-icon" href="#graphs"><img src="icons/icon-visits.svg"></a>
+      <a class="nav-icon" href="#settingsSection"><img src="icons/icon-settings.svg"></a>
     </nav>
 
     <main>
@@ -46,12 +46,13 @@
         </form>
       </div>
       
+      <!-- alert banner -->
       <div id="alert">
         <!-- JS will insert here -->
       </div>
 
       <!-- line graph chart -->
-      <section class="traffic">
+      <section class="traffic" id="graphs">
         <div class="traffic-header">
           <h3>Traffic</h3>
           <ul class="traffic-nav" id="trafficNav">
@@ -130,7 +131,7 @@
      
 
       <!-- new members widget -->
-      <section class="members">
+      <section class="members" id="members">
         <h3>New Members</h3>
         <div class="members-container">
           <img src="images/member-1.jpg" alt="photo of Victoria Chambers" class="profile-image">
@@ -170,7 +171,7 @@
       </section>
 
        <!-- recent activity widget -->
-       <section class="activity">
+       <section class="activity" id="visits">
         <h3>Recent Activity</h3>
         <div class="members-container">
           <img src="images/member-1.jpg" class="profile-image">
@@ -220,7 +221,7 @@
       </section>
 
       <!-- local settings widget -->
-      <section class="settings">
+      <section class="settings" id="settingsSection">
         <h3>Settings</h3>
         
         <!-- custom CSS toggle code-->

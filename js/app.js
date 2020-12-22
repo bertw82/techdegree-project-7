@@ -8,6 +8,22 @@ g.addEventListener('click', () => {
   dropDown.style.display = 'initial';
 })
 
+// // create dropdown notification items
+// const notifyPhrases = [
+//   'You have 6 new messages',
+//   'You have 3 new followers',
+//   'You have 10 new visits'
+// ];
+
+// function createLi() {
+//   const li = document.createElement('li');
+//   li.className = 'list-item';
+//   const p = document.createElement('p');
+//   p.textContent = 
+//   const button = document.createElement('button');
+//   li.appendChild(p).appendChild('button');
+// };
+
 // delete notification list item
 dropDown.addEventListener('click', (e) => { 
   const button = document.querySelectorAll('.list-item button');

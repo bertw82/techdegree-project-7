@@ -599,9 +599,9 @@ header g {
   padding: 10px;
   margin: 10px;
 }
-.dropdown-content .list-item span {
+.dropdown-content .list-item p {
   color: darkslategrey;
-  padding: 20px 16px 0;
+  padding: 10px;
 }
 .dropdown-content .list-item button:hover {
   background: #bdcd5a;
@@ -697,23 +697,27 @@ header g {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   }
 }
-.traffic-link {
-  padding: 10px;
+@media (min-width: 768px) {
+  .traffic-link {
+    padding: 10px;
+  }
 }
 .traffic-nav {
   list-style-type: none;
   padding-left: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 @media (min-width: 768px) {
   .traffic-nav {
+    justify-content: space-around;
     margin-right: 20px;
   }
 }
 @media (min-width: 768px) {
   .traffic-header {
     display: flex;
+    align-items: center;
   }
 }
 

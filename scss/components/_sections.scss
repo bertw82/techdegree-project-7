@@ -5,19 +5,22 @@
     border-bottom: $border;
   }
   &-link {
-    padding: 10px;
+    @include mq(med) {
+      padding: 10px;
+    }
   }
   &-nav {
     list-style-type: none;
     padding-left: 0;
-    @include flexy($just: space-around,);
+    @include flexy($just: center);
     @include mq(med) {
+      justify-content: space-around;
       margin-right: 20px;
     }
   }
   &-header {
     @include mq(med) {
-      @include flexy;
+      @include flexy($align:center);
     }
   }
 }
