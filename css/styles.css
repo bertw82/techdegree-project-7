@@ -509,7 +509,7 @@ nav {
     margin-top: 40px;
   }
   .nav-icon:hover {
-    border-left: 3px solid #44c17b;
+    border-left: 3px solid #bdcd5a;
   }
 }
 
@@ -555,7 +555,7 @@ header g {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #44c17b;
+  background-color: #bdcd5a;
 }
 
 .dropdown-content {
@@ -604,12 +604,12 @@ header g {
   padding: 20px 16px 0;
 }
 .dropdown-content .list-item button:hover {
-  background: seagreen;
+  background: #bdcd5a;
   border-radius: 5px;
   color: #fff;
 }
 .dropdown-content .list-item button:active {
-  background: #44c17b;
+  background: #d4df95;
 }
 
 .hide {
@@ -955,18 +955,19 @@ header g {
   padding: 10px;
 }
 .traffic-button:hover {
-  background: seagreen;
+  background: #bdcd5a;
   color: #fff;
   border-radius: 10px;
 }
 .traffic-button:active {
-  background: #44c17b;
+  background: #d4df95;
 }
 
-.button-background {
+.button-background,
+.initial-button {
   border: none;
   padding: 10px;
-  background: #8b2e62;
+  background: slateblue;
   border-radius: 10px;
   color: #fff;
 }
@@ -995,10 +996,10 @@ header g {
 }
 
 .button-disabled {
-  background-color: seagreen;
+  background-color: #bdcd5a;
 }
 .button-disabled:hover {
-  background-color: #44c17b;
+  background-color: #d4df95;
 }
 
 .toggle-grid {

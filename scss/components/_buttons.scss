@@ -30,7 +30,8 @@ button {
   }
 }
 
-.button-background {
+.button-background,
+.initial-button {
   border: none;
   padding: 10px;
   background: $button-complement;

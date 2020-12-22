@@ -101,6 +101,7 @@ trafficNav.addEventListener('click', (e) => {
     if (trafficButton[i] === e.target) { 
       for (let i = 0; i < trafficButton.length; i++) {
         trafficButton[i].classList.remove('button-background');
+        trafficButton[i].classList.remove('initial-button');
       };
       addData(trafficChart, chartUpdate[i]);
       trafficButton[i].className = 'button-background';
