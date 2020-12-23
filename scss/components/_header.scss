@@ -55,6 +55,7 @@ header {
     width: 278px;
     @include flexy($just: space-between);
     button {
+      background: transparent;
       color: $color-text;
       padding: 10px;
       margin: 10px;

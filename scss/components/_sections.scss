@@ -103,6 +103,9 @@
         font-size: 1.2rem;
         color: $color-primary-dark;
         cursor: pointer;
+        a {
+          text-decoration: none;
+        }
       }
     }
   }

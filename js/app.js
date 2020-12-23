@@ -2,27 +2,32 @@ const notify = document.getElementById('notify');
 const dropDown = document.getElementById('dropDown');
 const g = document.querySelector('.ping');
 
-// remove notification dot 
+// remove notification dot and create dropdown notification items
 g.addEventListener('click', () => { 
   g.classList.remove('ping');
   dropDown.style.display = 'initial';
-})
-
-// // create dropdown notification items
-// const notifyPhrases = [
-//   'You have 6 new messages',
-//   'You have 3 new followers',
-//   'You have 10 new visits'
-// ];
-
-// function createLi() {
-//   const li = document.createElement('li');
-//   li.className = 'list-item';
-//   const p = document.createElement('p');
-//   p.textContent = 
-//   const button = document.createElement('button');
-//   li.appendChild(p).appendChild('button');
-// };
+  const notifyPhrases = [
+    'You have 6 new messages',
+    'You have 3 new followers',
+    'You have 10 new visits'
+  ];
+  
+  function createLi(phrase) {
+    const li = document.createElement('li');
+    const p = document.createElement('p');
+    const button = document.createElement('button');
+    li.className = 'list-item'; 
+    p.textContent = phrase;
+    button.textContent = 'X'; 
+    dropDown.appendChild(li);
+    li.appendChild(p);
+    li.appendChild(button);
+  };
+  
+  for ( let i = 0; i < notifyPhrases.length; i++) {
+    createLi(notifyPhrases[i]);
+  }
+});
 
 // delete notification list item
 dropDown.addEventListener('click', (e) => { 
@@ -33,7 +38,7 @@ dropDown.addEventListener('click', (e) => {
       button[i].parentNode.className = 'hide';
     }
   }
-})
+});
 
 // create alert banner
 const alertBanner = document.getElementById('alert');
@@ -51,7 +56,7 @@ alertBanner.addEventListener('click', (e) => {
   if (element.classList.contains("alert-banner-close")) {
     alertBanner.style.display = 'none';
     }
-})
+});
 
 const trafficCanvas = document.getElementById('traffic-chart');
 
@@ -66,7 +71,7 @@ let trafficData = {
     // backgroundColor: 'rgba(116, 119, 191, .3)',
     borderWidth: 1,
   }]
-}
+};
 
 // options for line graph
 let trafficOptions = {
@@ -101,7 +106,7 @@ function addData(chart, data) {
     chart.data.datasets[0].data = data;
   });
   chart.update();
-}
+};
 
 trafficNav.addEventListener('click', (e) => {
   const trafficButton = document.querySelectorAll('.traffic-link button');
@@ -190,7 +195,7 @@ const mobileOptions = {
       fontStyle: 'bold'
     }
   }
-}
+};
 
 // create mobile doughnut chart
 let mobileChart = new Chart(mobileCanvas, {
@@ -280,7 +285,7 @@ function autocomplete(inp, arr) {
 myInput.addEventListener("click", function (e) {
     closeAllLists(e.target);
   });
-}
+};
 
 autocomplete(myInput, users);
 

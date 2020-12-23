@@ -2,11 +2,11 @@
 $color-text: darkslategrey;
 $color-primary:slateblue;
 $color-primary-dark: darken($color-primary, 15%);
-$color-primary-light: lighten($color-primary, 15%);
+$color-primary-light: lighten($color-primary, 10%);
 $color-secondary: navy;
 $color-button: complement($color-primary);
 $button-complement: complement($color-button);
-$color-button-light: lighten($color-button, 15%);
+$color-button-light: lighten($color-button, 10%);
 $white: #fff;  
 $color-chart: rgba(108, 112, 224, 0.3);
 $color-accent: whitesmoke;
