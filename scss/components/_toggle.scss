@@ -1,6 +1,5 @@
 .toggle-grid {
-  display: grid;
-  grid-template-columns: 1fr 85px;
+  @include grid($disp: grid, $gt-col: 1fr 85px);
   margin: 20px;
   align-items: center;
   @include mq(med) {

@@ -415,6 +415,10 @@ footer p {
   padding-top: 20px;
 }
 
+a {
+  text-decoration: none;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -613,10 +617,6 @@ header g {
   background: #cdd981;
 }
 
-.hide {
-  display: none;
-}
-
 @media (min-width: 768px) {
   .search-input {
     display: flex;
@@ -751,16 +751,16 @@ header g {
 .social {
   display: grid;
   grid-template-columns: 1fr;
+  grid-gap: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  grid-gap: 10px;
 }
 @media (min-width: 768px) {
   .social {
     grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
     margin-left: 20px;
     margin-right: 20px;
-    grid-gap: 20px;
   }
 }
 @media (min-width: 1024px) {
@@ -805,10 +805,6 @@ header g {
 .members-container p[class=arrow] {
   font-size: 1.2rem;
   color: #4333a8;
-  cursor: pointer;
-}
-.members-container p[class=arrow] a {
-  text-decoration: none;
 }
 .members-text {
   font-size: 0.7rem;
@@ -828,9 +824,6 @@ header g {
   .members-text p {
     font-size: 0.8rem;
   }
-}
-.members-text a {
-  text-decoration: none;
 }
 
 @media (min-width: 768px) {

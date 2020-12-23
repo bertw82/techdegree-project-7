@@ -12,6 +12,22 @@
   align-items: $align;
   }
 
+// create grid container
+@mixin grid(
+  $disp: null,
+  $gt-col: null,
+  $gt-row: null,
+  $gt-area: null,
+  $gr-col: null,
+  $gr-gap: null,) {
+    display: $disp;
+    grid-template-columns: $gt-col;
+    grid-template-rows: $gt-row;
+    grid-template-areas: $gt-area;
+    grid-column: $gr-col;
+    grid-gap: $gr-gap;
+  }
+
 // Media Queries
 @mixin mq($break) {
   @if $break == sm {
@@ -29,6 +45,7 @@
   }
  }
 
+// mixin for border styles
  @mixin form-border {
   border: $border;
   border-radius: 5px;

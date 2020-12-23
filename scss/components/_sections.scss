@@ -55,19 +55,16 @@
 }
 
 .social {
-  display: grid;
-  grid-template-columns: 1fr;
+  @include grid($disp: grid, $gt-col: 1fr, $gr-gap: 10px);
   margin-left: 10px;
   margin-right: 10px;
-  grid-gap: 10px;
   @include mq(med) {  
-    grid-template-columns: 1fr 1fr;
+    @include grid($gt-col: 1fr 1fr, $gr-gap: 20px);
     margin-left: 20px;
     margin-right: 20px;
-    grid-gap: 20px;
   }
   @include mq(lg) {
-    grid-template-columns: repeat(3, 1fr);
+    @include grid($gt-col: repeat(3, 1fr));
   }
   &-container {
     @include mq(med) {
@@ -102,10 +99,6 @@
       &[class="arrow"] {
         font-size: 1.2rem;
         color: $color-primary-dark;
-        cursor: pointer;
-        a {
-          text-decoration: none;
-        }
       }
     }
   }
@@ -122,9 +115,6 @@
       @include mq(lg) {
         font-size: .8rem;
       }
-    }
-    a {
-      text-decoration: none;
     }
   }
 }

@@ -40,9 +40,7 @@ button {
 }
 
 .settings-button {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 15px;
+  @include grid($disp: grid, $gt-col: repeat(2, 1fr), $gr-gap: 15px);
   width: 90%;
   margin: 13px auto;
 }

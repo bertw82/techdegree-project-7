@@ -34,8 +34,7 @@ dropDown.addEventListener('click', (e) => {
   const button = document.querySelectorAll('.list-item button');
   for ( let i = 0; i < button.length; i++) {
     if (e.target === button[i]) {
-      button[i].parentNode.classList.remove('list-item');
-      button[i].parentNode.className = 'hide';
+      button[i].parentNode.style.display = 'none';
     }
   }
 });
