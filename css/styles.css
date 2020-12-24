@@ -700,7 +700,8 @@ header g {
 
 .form-field {
   width: 90%;
-  margin-top: 17px;
+  margin-top: 15px;
+  cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   padding: 10px;
@@ -805,7 +806,7 @@ header g {
   }
 }
 .members-container {
-  width: 80%;
+  width: 90%;
   padding-bottom: 10px;
   padding-top: 10px;
   margin: 0 auto;
@@ -813,6 +814,11 @@ header g {
   height: 70px;
   display: flex;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .members-container {
+    width: 80%;
+  }
 }
 @media (min-width: 1024px) {
   .members-container {
@@ -967,7 +973,7 @@ header g {
 }
 .widget-container button {
   width: 90%;
-  margin: 10px;
+  margin-top: 20px;
 }
 
 .traffic-button {
@@ -999,7 +1005,7 @@ header g {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 15px;
   width: 90%;
-  margin: 13px auto;
+  margin: 20px auto;
 }
 
 .button-primary,

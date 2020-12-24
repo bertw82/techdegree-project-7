@@ -278,7 +278,7 @@
     height: 2em;
     background-color: #D8D9DB;
     border-radius: 1.75em;
-
+    cursor: pointer;
     transition: all .4s ease-out; }
   .switch-ios.switch-light > span span {
     position: absolute;

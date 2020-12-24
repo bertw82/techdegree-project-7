@@ -12,7 +12,7 @@ button {
   }
   .widget-container & {  
     width: 90%;
-    margin: 10px;
+    margin-top: 20px;
   }
 }
 .traffic-button {
@@ -42,7 +42,7 @@ button {
 .settings-button {
   @include grid($disp: grid, $gt-col: repeat(2, 1fr), $gr-gap: 15px);
   width: 90%;
-  margin: 13px auto;
+  margin: 20px auto;
 }
 
 .button-primary,

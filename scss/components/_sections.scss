@@ -86,12 +86,15 @@
     border-right: $border;
   }
   &-container {
-    width: 80%;
+    width: 90%;
     padding-bottom: 10px;
     padding-top: 10px;
     margin: 0 auto;
     border-bottom: $border;
     height: 70px;
+    @include mq(med) {
+      width: 80%;
+    }
     @include mq(lg) {
       width: 90%;
     }
