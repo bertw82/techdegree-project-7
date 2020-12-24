@@ -45,8 +45,25 @@ main {
   }
 }
 
-.daily, 
 .members,
+.activity {
+  @include mq(med) {
+    @include grid($gr-col: 1 / span 2);
+  }
+}
+
+.members {
+  @include mq(lg) {
+    @include grid($gr-col: 1 / span 1);
+  }
+}
+.activity {
+  @include mq(lg) {
+    @include grid($gr-col:  2 / span 1);
+  }
+}
+
+.daily, 
 .message {
   @include mq(med) {
     @include grid($gr-col:  1 / span 1);
@@ -54,7 +71,6 @@ main {
 }
 
 .mobile,
-.activity,
 .settings {
   @include mq(med) {
     @include grid($gr-col:  2 / span 1);

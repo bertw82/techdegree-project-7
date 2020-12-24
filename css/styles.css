@@ -471,8 +471,26 @@ main {
 }
 
 @media (min-width: 768px) {
+  .members,
+.activity {
+    grid-column: 1/span 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .members {
+    grid-column: 1/span 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .activity {
+    grid-column: 2/span 1;
+  }
+}
+
+@media (min-width: 768px) {
   .daily,
-.members,
 .message {
     grid-column: 1/span 1;
   }
@@ -480,7 +498,6 @@ main {
 
 @media (min-width: 768px) {
   .mobile,
-.activity,
 .settings {
     grid-column: 2/span 1;
   }
@@ -612,9 +629,6 @@ header g {
   background: #bdcd5a;
   border-radius: 5px;
   color: #fff;
-}
-.dropdown-content .list-item button:active {
-  background: #cdd981;
 }
 
 @media (min-width: 768px) {
@@ -783,11 +797,15 @@ header g {
 @media (min-width: 768px) {
   .members {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+}
+@media (min-width: 1024px) {
+  .members {
     border-right: 1px solid rgba(0, 0, 0, 0.3);
   }
 }
 .members-container {
-  width: 90%;
+  width: 80%;
   padding-bottom: 10px;
   padding-top: 10px;
   margin: 0 auto;
@@ -796,18 +814,27 @@ header g {
   display: flex;
   align-items: center;
 }
+@media (min-width: 1024px) {
+  .members-container {
+    width: 90%;
+  }
+}
 .members-container:nth-of-type(8n+4) {
   border: none;
 }
-.members-container p {
+.members-container p, .members-container a {
   font-size: 0.7rem;
 }
-.members-container p[class=arrow] {
+@media (min-width: 768px) {
+  .members-container p, .members-container a {
+    font-size: 0.8rem;
+  }
+}
+.members-container p[class=arrow] a {
   font-size: 1.2rem;
   color: #4333a8;
 }
 .members-text {
-  font-size: 0.7rem;
   margin-right: auto;
   padding-left: 10px;
   text-align: left;
@@ -818,12 +845,6 @@ header g {
 .members-text p {
   margin-bottom: 0;
   margin-top: 0;
-  font-size: 0.7rem;
-}
-@media (min-width: 1024px) {
-  .members-text p {
-    font-size: 0.8rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -956,19 +977,19 @@ header g {
   padding: 10px;
 }
 .traffic-button:hover {
-  background: #bdcd5a;
+  background: #57c889;
   color: #fff;
   border-radius: 10px;
 }
 .traffic-button:active {
-  background: #cdd981;
+  background: #57c889;
 }
 
 .button-background,
 .initial-button {
   border: none;
   padding: 10px;
-  background: slateblue;
+  background: seagreen;
   border-radius: 10px;
   color: #fff;
 }
@@ -997,10 +1018,10 @@ header g {
 }
 
 .button-disabled {
-  background-color: #bdcd5a;
+  background-color: seagreen;
 }
 .button-disabled:hover {
-  background-color: #cdd981;
+  background-color: #57c889;
 }
 
 .toggle-grid {

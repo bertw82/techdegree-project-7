@@ -21,7 +21,7 @@ button {
   color: $color-text;
   padding: 10px;
   &:hover {
-    background: $color-button;
+    background: $color-button-light;
     color: $white;
     border-radius: 10px;
   }
@@ -34,7 +34,7 @@ button {
 .initial-button {
   border: none;
   padding: 10px;
-  background: $button-complement;
+  background: $color-button;
   border-radius: 10px;
   color: $white;
 }

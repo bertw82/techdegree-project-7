@@ -288,5 +288,20 @@ myInput.addEventListener("click", function (e) {
 
 autocomplete(myInput, users);
 
+const message = document.getElementById('messageField');
+const send = document.getElementById('send');
 
+send.addEventListener('click', () => {
+  if (myInput.value === "" && message.value === "" ) {
+    alert('Please fill out User and Message fields before sending');
+  } else if (myInput.value === "") {
+    alert('Please fill out User field before sending');
+  } else if (message.value === "") {
+    alert('Please fill out Message field before sending');
+  } else {
+    alert(`Message sent successfully to ${myInput.value}`);
+    myInput.value = null;
+    messageField.value = null;
+  }
+});
   

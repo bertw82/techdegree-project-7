@@ -23,7 +23,7 @@ header {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: $color-button;
+  background-color: $color-complement;
 }
 
 .dropdown-content {
@@ -64,12 +64,9 @@ header {
       padding: 10px;
     }
     button:hover {
-      background: $color-button;
+      background: $color-complement;
       border-radius: 5px;
       color: $white;
-    }
-    button:active {
-      background: $color-button-light;
     }
   }
  
