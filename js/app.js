@@ -288,6 +288,7 @@ myInput.addEventListener("click", function (e) {
 
 autocomplete(myInput, users);
 
+// choose a user and send a message
 const message = document.getElementById('messageField');
 const send = document.getElementById('send');
 
@@ -305,3 +306,32 @@ send.addEventListener('click', () => {
   }
 });
   
+// local storage JS
+if (window.localStorage) {
+  const checkBox1 = document.getElementById('checkBox1');
+  const checkBox2 = document.getElementById('checkBox2');
+  const timeZone = document.getElementById('timeZone');
+  const save = document.getElementById('save');
+  const cancel = document.getElementById('cancel');
+
+  save.addEventListener('click', () => {
+    localStorage.setItem('checkBox1', checkBox1.checked);
+    localStorage.setItem('checkBox2', checkBox2.checked);
+  });
+  // first checkbox local storage
+  if (window.localStorage.getItem('checkBox1') == "true") {
+    checkBox1.checked = true;
+  } else {
+    checkBox1.checked = false;
+  }
+  // second checkbox local storage
+  if (window.localStorage.getItem('checkBox2') == "true") {
+    checkBox2.checked = true;
+  } else {
+    checkBox2.checked = false;
+  }
+  // clear local storage with "cancel" button
+  cancel.addEventListener('click', () => {
+    localStorage.clear();
+  });
+}
