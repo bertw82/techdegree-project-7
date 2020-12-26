@@ -2,33 +2,35 @@ const notify = document.getElementById('notify');
 const dropDown = document.getElementById('dropDown');
 const g = document.querySelector('.ping');
 
-// remove notification dot and create dropdown notification items
+// alert notification phrases
+const notifyPhrases = [
+  'You have 6 new messages',
+  'You have 3 new followers',
+  'You have 10 new visits'
+];
+
+// function to create notification list items
+function createLi(phrase) {
+  const li = document.createElement('li');
+  const p = document.createElement('p');
+  const button = document.createElement('button');
+  li.className = 'list-item'; 
+  p.textContent = phrase;
+  button.textContent = 'X'; 
+  dropDown.appendChild(li);
+  li.appendChild(p);
+  li.appendChild(button);
+};
+
+for ( let i = 0; i < notifyPhrases.length; i++) {
+  createLi(notifyPhrases[i]);
+};
+
+// remove notification dot and display notification list items
 g.addEventListener('click', () => { 
   g.classList.remove('ping');
-  dropDown.style.display = 'initial';
-  const notifyPhrases = [
-    'You have 6 new messages',
-    'You have 3 new followers',
-    'You have 10 new visits'
-  ];
-  
-  function createLi(phrase) {
-    const li = document.createElement('li');
-    const p = document.createElement('p');
-    const button = document.createElement('button');
-    li.className = 'list-item'; 
-    p.textContent = phrase;
-    button.textContent = 'X'; 
-    dropDown.appendChild(li);
-    li.appendChild(p);
-    li.appendChild(button);
-  };
-  
-  for ( let i = 0; i < notifyPhrases.length; i++) {
-    createLi(notifyPhrases[i]);
-  }
-
-}, {once:true});
+  dropDown.classList.toggle('show');
+});
 
 // delete notification list item
 dropDown.addEventListener('click', (e) => { 
@@ -179,9 +181,6 @@ const mobileData = {
       '#1e90ff',
       '#ff4500',
       '#00fa9a'
-      // '#7477BF',
-      // '#78CF82',
-      // '#51B6C8'
     ]
   }]
 };
@@ -314,7 +313,6 @@ if (window.localStorage) {
   const timeZone = document.getElementById('timeZone');
   const save = document.getElementById('save');
   const cancel = document.getElementById('cancel');
-  const timeOption = document.querySelector('#timeZone option');
 
   // create local storage by clicking "save" button
   save.addEventListener('click', () => {

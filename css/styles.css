@@ -631,6 +631,10 @@ header g {
   color: #fff;
 }
 
+.show {
+  display: block;
+}
+
 @media (min-width: 768px) {
   .search-input {
     display: flex;
