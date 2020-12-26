@@ -329,18 +329,18 @@ if (window.localStorage) {
     checkBox1.checked = false;
   }
   // second checkbox local storage
-  if (window.localStorage.getItem('check2') == "true") {
+  if (localStorage.getItem('check2') == "true") {
     checkBox2.checked = true;
   } else {
     checkBox2.checked = false;
   }
   // timezone local storage
-  timeZone.value = window.localStorage.getItem('timeSelect');
+  if (localStorage.getItem('timeSelect') !== null) {
+    timeZone.value = window.localStorage.getItem('timeSelect');
+  }
 
   // clear local storage with "cancel" button
   cancel.addEventListener('click', () => {
     localStorage.clear();
   });
-
-  // timeOption.selected = true;
 }
