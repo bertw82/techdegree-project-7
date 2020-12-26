@@ -27,7 +27,8 @@ g.addEventListener('click', () => {
   for ( let i = 0; i < notifyPhrases.length; i++) {
     createLi(notifyPhrases[i]);
   }
-});
+
+}, {once:true});
 
 // delete notification list item
 dropDown.addEventListener('click', (e) => { 
@@ -313,25 +314,33 @@ if (window.localStorage) {
   const timeZone = document.getElementById('timeZone');
   const save = document.getElementById('save');
   const cancel = document.getElementById('cancel');
+  const timeOption = document.querySelector('#timeZone option');
 
+  // create local storage by clicking "save" button
   save.addEventListener('click', () => {
-    localStorage.setItem('checkBox1', checkBox1.checked);
-    localStorage.setItem('checkBox2', checkBox2.checked);
+    localStorage.setItem('check1', checkBox1.checked);
+    localStorage.setItem('check2', checkBox2.checked);
+    localStorage.setItem('timeSelect', timeZone.value);
   });
   // first checkbox local storage
-  if (window.localStorage.getItem('checkBox1') == "true") {
+  if (window.localStorage.getItem('check1') == "true") {
     checkBox1.checked = true;
   } else {
     checkBox1.checked = false;
   }
   // second checkbox local storage
-  if (window.localStorage.getItem('checkBox2') == "true") {
+  if (window.localStorage.getItem('check2') == "true") {
     checkBox2.checked = true;
   } else {
     checkBox2.checked = false;
   }
+  // timezone local storage
+  timeZone.value = window.localStorage.getItem('timeSelect');
+
   // clear local storage with "cancel" button
   cancel.addEventListener('click', () => {
     localStorage.clear();
   });
+
+  // timeOption.selected = true;
 }
