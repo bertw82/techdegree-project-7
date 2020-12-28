@@ -1,6 +1,6 @@
 const notify = document.getElementById('notify');
 const dropDown = document.getElementById('dropDown');
-const g = document.querySelector('.ping');
+const bell = document.querySelector('.ping');
 
 // alert notification phrases
 const notifyPhrases = [
@@ -29,8 +29,8 @@ for ( let i = 0; i < notifyPhrases.length; i++) {
 };
 
 // remove notification dot and display notification list items
-g.addEventListener('click', () => { 
-  g.classList.remove('ping');
+bell.addEventListener('click', () => { 
+  bell.classList.remove('ping');
   dropDown.classList.toggle('show');
 });
 
