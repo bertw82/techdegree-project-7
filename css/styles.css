@@ -563,7 +563,8 @@ header > p {
     padding-right: 10px;
   }
 }
-header g {
+
+.header-div {
   margin-right: 20px;
   padding-right: 20px;
   border-right: 1px solid rgba(0, 0, 0, 0.3);
@@ -900,7 +901,7 @@ header g {
     transform: rotate(0deg);
   }
   10% {
-    tranform: rotate(45deg);
+    transform: rotate(45deg);
   }
   30% {
     transform: rotate(-45deg);
