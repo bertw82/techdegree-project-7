@@ -570,7 +570,7 @@ header g {
   position: relative;
 }
 
-.ping:after {
+.ping::after {
   content: "";
   position: absolute;
   width: 10px;
@@ -611,19 +611,27 @@ header g {
 }
 .dropdown-content .list-item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  width: 278px;
+  width: 286px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 .dropdown-content .list-item button {
   background: transparent;
   color: darkslategrey;
   padding: 10px;
   margin: 10px;
+  margin-left: auto;
+}
+.dropdown-content .list-item div {
+  background: #bdcd5a;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 10px;
 }
 .dropdown-content .list-item p {
   color: darkslategrey;
-  padding: 10px;
+  padding: 10px 10px 10px 0;
 }
 .dropdown-content .list-item button:hover {
   background: #bdcd5a;

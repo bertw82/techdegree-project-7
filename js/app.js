@@ -14,10 +14,12 @@ function createLi(phrase) {
   const li = document.createElement('li');
   const p = document.createElement('p');
   const button = document.createElement('button');
+  const span = document.createElement('div');
   li.className = 'list-item'; 
   p.textContent = phrase;
   button.textContent = 'X'; 
   dropDown.appendChild(li);
+  li.appendChild(span);
   li.appendChild(p);
   li.appendChild(button);
 };
@@ -64,8 +66,7 @@ const trafficCanvas = document.getElementById('traffic-chart');
 
 // data for line graph
 let trafficData = {
-  labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
-            "4-10", "11-17", "18-24", "25-31"],
+  labels: ["1am", "4am", "5am", "7am", "9am", "11am", "1pm", "3pm", "5pm", "7pm", "9pm"],
   datasets: [{
     data:  [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
       2500],
@@ -103,21 +104,28 @@ let trafficChart = new Chart(trafficCanvas, {
 // add new data to line graph
 const trafficNav = document.getElementById('trafficNav');
 
-function addData(chart, data) {
-  chart.data.datasets.forEach((dataset) => {
-    chart.data.datasets[0].data = data;
-  });
+function addData(chart, labels, data) {
+  chart.data.datasets[0].data = data;
+  chart.data.labels = labels;
   chart.update();
 };
 
 trafficNav.addEventListener('click', (e) => {
   const trafficButton = document.querySelectorAll('.traffic-link button');
 
+  const labelsUpdate = [
+    ["1am", "4am", "5am", "7am", "9am", "11am", "1pm", "3pm", "5pm", "7pm", "9pm"],
+    ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun", "Mon", "Tues", "Wed"],
+    ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
+            "4-10", "11-17", "18-24", "25-31"],
+    ["Jan", "Feb", "March", "April", "May", "June", "July", "August", "September", "October", "November"]
+  ];
+
   const chartUpdate = [
     [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500],
-    [1000, 600, 2000, 2225, 1250, 750, 1250, 1000, 2250, 700, 2500],
-    [400, 550, 1250, 600, 750, 2250, 2000, 1900, 1800, 1000, 600],
-    [1250, 770, 600, 2300, 2000, 1250, 900, 700, 1000, 1250, 900],
+    [400, 300, 200, 225, 150, 450, 550, 300, 350, 500, 450],
+    [2600, 2400, 2250, 800, 750, 2250, 2000, 1900, 1800, 1000, 1200],
+    [1250, 970, 1200, 2300, 2000, 1250, 900, 700, 1000, 1250, 900],
   ];
 
   for (let i = 0; i < trafficButton.length; i++) {
@@ -126,7 +134,7 @@ trafficNav.addEventListener('click', (e) => {
         trafficButton[i].classList.remove('button-background');
         trafficButton[i].classList.remove('initial-button');
       };
-      addData(trafficChart, chartUpdate[i]);
+      addData(trafficChart, labelsUpdate[i], chartUpdate[i]);
       trafficButton[i].className = 'button-background';
       } else if (trafficButton[i] !== e.target) {
       trafficButton[i].className = 'traffic-button';
@@ -319,6 +327,7 @@ if (window.localStorage) {
     localStorage.setItem('check1', checkBox1.checked);
     localStorage.setItem('check2', checkBox2.checked);
     localStorage.setItem('timeSelect', timeZone.value);
+    alert('Your settings have been saved');
   });
   // first checkbox local storage
   if (window.localStorage.getItem('check1') == "true") {
@@ -340,5 +349,8 @@ if (window.localStorage) {
   // clear local storage with "cancel" button
   cancel.addEventListener('click', () => {
     localStorage.clear();
+    checkBox1.checked = false;
+    checkBox2.checked = false;
+    timeZone.selectedIndex = 0;
   });
 }
