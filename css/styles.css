@@ -590,9 +590,15 @@ header > p {
   padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
-@media (max-width: 767px) {
+@media (max-width: 375px) {
   .dropdown-content {
     left: 17px;
+    top: 37px;
+  }
+}
+@media (min-width: 375px) and (max-width: 767px) {
+  .dropdown-content {
+    right: 65px;
     top: 37px;
   }
 }

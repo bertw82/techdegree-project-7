@@ -36,8 +36,12 @@ header {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 0;
   border: $border;
-  @include mq(sm) {
+  @media (max-width: 375px) {
     left: 17px;
+    top: 37px;
+  }
+  @media (min-width: 375px) and (max-width: 767px) {
+    right: 65px;
     top: 37px;
   }
   @include mq(med) {
