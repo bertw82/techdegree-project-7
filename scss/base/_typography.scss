@@ -1,5 +1,6 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -12,13 +13,15 @@ body {
 }
 
 h1 {
-  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
   margin-right: auto;
   color: $white;
   padding-left: 10px;
-  span {
+  span:first-of-type {
+    font-weight: bold;
+  } 
+  span + span {
     font-weight: lighter;
-    color: $white;
   }
 }
 
@@ -71,9 +74,24 @@ h3 {
   }
   .members &,
   .activity & {
-    // @include mq(sm) {
-      margin-bottom: 0;
-    // }
+    margin-bottom: 0;
+  }
+  .message & {
+    @include mq(sm) {
+      margin: 0;
+      padding: 0 0 20px;
+    }
+  }
+  // .members & {
+  //   @include mq(sm) {
+  //     margin-bottom: 0;
+  //   }
+  // }
+  .activity & {
+    @include mq(sm) {
+      margin: 0;
+      padding: 0 0 10px;
+    }
   }
 }
 
@@ -97,6 +115,11 @@ p {
 
 a {
   text-decoration: none;
+}
+
+.phrase-span {
+  font-weight: bolder;
+  font-size: 1.2rem;
 }
 
 

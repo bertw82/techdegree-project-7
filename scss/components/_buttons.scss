@@ -42,28 +42,35 @@ button {
 .settings-button {
   @include grid($disp: grid, $gt-col: repeat(2, 1fr), $gr-gap: 15px);
   width: 90%;
-  margin: 20px auto;
+  margin: 25px auto;
 }
 
 .button-primary,
-.button-disabled {
+.button-disabled,
+.button-save {
   padding: 15px;
   color: $white;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.button-primary {
-  background-color: $color-primary;
-  &:hover {
-    background-color: $color-primary-light;
+  border: none;
+  &:active {
+    box-shadow: inset 0 0 10px rgba(0,0,0,.3);
   }
 }
 
-.button-disabled {
+.button-primary,
+.button-save {
   background-color: $color-button;
   &:hover {
     background-color: $color-button-light;
   }
 }
+
+.button-disabled {
+  background-color: $color-save;
+  &:hover {
+    background-color: lighten($color-save, 15%);
+  }
+}
+
 

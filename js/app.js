@@ -4,9 +4,9 @@ const bell = document.querySelector('.ping');
 
 // alert notification phrases
 const notifyPhrases = [
-  'You have 6 new messages',
-  'You have 3 new followers',
-  'You have 10 new visits'
+  [['You have'], [6], ['new messages']],
+  [['You have'], [3], ['new followers']],
+  [['You have'], [10], ['new visits']]
 ];
 
 // function to create notification list items
@@ -16,7 +16,7 @@ function createLi(phrase) {
   const button = document.createElement('button');
   const span = document.createElement('div');
   li.className = 'list-item'; 
-  p.textContent = phrase;
+  p.innerHTML = `${phrase[0]} <span class="phrase-span">${phrase[1]}</span> ${phrase[2]}`;
   button.textContent = 'X'; 
   dropDown.appendChild(li);
   li.appendChild(span);
@@ -48,11 +48,11 @@ dropDown.addEventListener('click', (e) => {
 const alertBanner = document.getElementById('alert');
 
 alertBanner.innerHTML = `
-                        <div class="alert-banner">
-                          <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to perform</p>
-                          <p class="alert-banner-close">X</p>
-                        </div>
-                        `;
+  <div class="alert-banner">
+    <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to perform</p>
+    <p class="alert-banner-close">X</p>
+  </div>
+`;
 
 // close alert banner
 alertBanner.addEventListener('click', (e) => {
@@ -70,8 +70,7 @@ let trafficData = {
   datasets: [{
     data:  [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
       2500],
-      backgroundColor: 'rgba(108, 112, 224, 0.3)',
-    // backgroundColor: 'rgba(116, 119, 191, .3)',
+      backgroundColor: 'rgb(72, 149, 239, 0.3)',
     borderWidth: 1,
   }]
 };
@@ -150,7 +149,7 @@ const dailyData = {
   datasets: [{
     label: 'Number of Users',
     data: [75, 115, 175, 125, 225, 200, 100],
-    backgroundColor: '#b22222',
+    backgroundColor: '#4895EF',
     borderWidth: 1
   }]
 };
@@ -186,9 +185,9 @@ const mobileData = {
     data: [2000, 550, 500],
     borderWidth: 0,
     backgroundColor: [
-      '#1e90ff',
-      '#ff4500',
-      '#00fa9a'
+      '#560BAD',
+      '#4CC9F0',
+      '#F72585'
     ]
   }]
 };
@@ -215,13 +214,35 @@ let mobileChart = new Chart(mobileCanvas, {
 const myInput = document.getElementById('myInput');
 
 const users = [
+  "Alison Smith",
+  "Bert Witzel",
+  "Christian Roberts",
+  "Frankie Moreno",
+  "Greg Daly",
+  "Hank Rogers",
+  "Ida Wellington",
+  "Justine Parks",
+  "Kristin Smith",
+  "Laura Parker",
+  "Maxine Hopewell",
+  "Nick Harrison",
+  "Orion Tupilow",
+  "Peter Gilles",
+  "Quenny Wells",
+  "Roger Wallace",
+  "Tanner Philips",
+  "Ulysses Park",
+  "William Wallace",
+  "Xavier McDonald",
+  "Yvette MacCloud",
+  "Zelda Fitzgerald",
   "Victoria Chambers",
   "Dale Byrd",
   "Dawn Wood",
   "Jimmy Oliver",
   "Hank Jones",
   "Sally Jones",
-  "Edgar Smith",
+  "Edgar Allan Poe",
   "Sarah Perkins",
   "Meghan Williams",
   "David Copperfield"
@@ -300,12 +321,15 @@ autocomplete(myInput, users);
 const message = document.getElementById('messageField');
 const send = document.getElementById('send');
 
-send.addEventListener('click', () => {
+send.addEventListener('click', (e) => {
   if (myInput.value === "" && message.value === "" ) {
+    e.preventDefault();
     alert('Please fill out User and Message fields before sending');
   } else if (myInput.value === "") {
+    e.preventDefault();
     alert('Please fill out User field before sending');
   } else if (message.value === "") {
+    e.preventDefault();
     alert('Please fill out Message field before sending');
   } else {
     alert(`Message sent successfully to ${myInput.value}`);
@@ -314,43 +338,35 @@ send.addEventListener('click', () => {
   }
 });
   
-// local storage JS
-if (window.localStorage) {
-  const checkBox1 = document.getElementById('checkBox1');
-  const checkBox2 = document.getElementById('checkBox2');
-  const timeZone = document.getElementById('timeZone');
-  const save = document.getElementById('save');
-  const cancel = document.getElementById('cancel');
+/**
+ * local storage JS
+ */
 
-  // create local storage by clicking "save" button
-  save.addEventListener('click', () => {
-    localStorage.setItem('check1', checkBox1.checked);
-    localStorage.setItem('check2', checkBox2.checked);
-    localStorage.setItem('timeSelect', timeZone.value);
-    alert('Your settings have been saved');
-  });
-  // first checkbox local storage
-  if (window.localStorage.getItem('check1') == "true") {
-    checkBox1.checked = true;
-  } else {
-    checkBox1.checked = false;
-  }
-  // second checkbox local storage
-  if (localStorage.getItem('check2') == "true") {
-    checkBox2.checked = true;
-  } else {
-    checkBox2.checked = false;
-  }
-  // timezone local storage
-  if (localStorage.getItem('timeSelect') !== null) {
-    timeZone.value = window.localStorage.getItem('timeSelect');
-  }
-
-  // clear local storage with "cancel" button
-  cancel.addEventListener('click', () => {
-    localStorage.clear();
-    checkBox1.checked = false;
-    checkBox2.checked = false;
-    timeZone.selectedIndex = 0;
-  });
+const checkBox1 = document.getElementById('checkBox1');
+const checkBox2 = document.getElementById('checkBox2');
+const timeZone = document.getElementById('timeZone');
+const save = document.getElementById('save');
+const cancel = document.getElementById('cancel');
+// create local storage by clicking "save" button
+save.addEventListener('click', () => {
+  localStorage.setItem('check1', JSON.stringify(checkBox1.checked));
+  localStorage.setItem('check2', JSON.stringify(checkBox2.checked));
+  localStorage.setItem('timeSelect', timeZone.value);
+  alert('Your settings have been saved');
+});
+// first checkbox local storage
+checkBox1.checked = JSON.parse(window.localStorage.getItem('check1'));
+// second checkbox local storage
+checkBox2.checked = JSON.parse(window.localStorage.getItem('check2'));
+// timezone local storage
+if (localStorage.getItem('timeSelect') !== null) {
+  timeZone.value = window.localStorage.getItem('timeSelect');
 }
+// clear local storage with "cancel" button
+cancel.addEventListener('click', () => {
+  localStorage.clear();
+  checkBox1.checked = false;
+  checkBox2.checked = false;
+  timeZone.selectedIndex = 0;
+});
+

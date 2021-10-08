@@ -6,6 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css2?family=Oswald&family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -349,14 +350,16 @@ body {
 }
 
 h1 {
-  font-weight: bold;
+  font-family: "Roboto", sans-serif;
   margin-right: auto;
   color: #fff;
   padding-left: 10px;
 }
-h1 span {
+h1 span:first-of-type {
+  font-weight: bold;
+}
+h1 span + span {
   font-weight: lighter;
-  color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -398,10 +401,22 @@ h3 {
 .members h3, .activity h3 {
   margin-bottom: 0;
 }
+@media (max-width: 767px) {
+  .message h3 {
+    margin: 0;
+    padding: 0 0 20px;
+  }
+}
+@media (max-width: 767px) {
+  .activity h3 {
+    margin: 0;
+    padding: 0 0 10px;
+  }
+}
 
 .social-text p:first-child {
   font-weight: bold;
-  color: slateblue;
+  color: #4361ee;
   margin: 0;
   text-align: left;
 }
@@ -417,6 +432,11 @@ footer p {
 
 a {
   text-decoration: none;
+}
+
+.phrase-span {
+  font-weight: bolder;
+  font-size: 1.2rem;
 }
 
 .grid-container {
@@ -504,7 +524,7 @@ main {
 }
 
 nav {
-  background: navy;
+  background: #3a0ca3;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -530,11 +550,11 @@ nav {
     margin-top: 40px;
   }
   .nav-icon:hover {
-    border-left: 3px solid #bdcd5a;
+    border-left: 3px solid #eed043;
   }
 }
 
-img[src*=bwitzel] {
+.header-profile-img {
   height: 35px;
   width: 35px;
   border-radius: 50%;
@@ -542,13 +562,19 @@ img[src*=bwitzel] {
 }
 
 .profile-image {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
+  margin: 10px 0;
+}
+@media (min-width: 768px) {
+  .profile-image {
+    margin: 0 0;
+  }
 }
 
 header {
-  background: slateblue;
+  background: #4361ee;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -577,7 +603,7 @@ header > p {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #bdcd5a;
+  background-color: #eed043;
 }
 
 .dropdown-content {
@@ -630,7 +656,7 @@ header > p {
   margin-left: auto;
 }
 .dropdown-content .list-item div {
-  background: #bdcd5a;
+  background: #4895EF;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -641,7 +667,7 @@ header > p {
   padding: 10px 10px 10px 0;
 }
 .dropdown-content .list-item button:hover {
-  background: #bdcd5a;
+  background: #4895EF;
   border-radius: 5px;
   color: #fff;
 }
@@ -771,17 +797,6 @@ header > p {
   }
 }
 
-.social-flex {
-  display: flex;
-  padding: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  background: whitesmoke;
-}
-
-.social-text {
-  padding-left: 20px;
-}
-
 .social {
   display: grid;
   grid-template-columns: 1fr;
@@ -791,27 +806,41 @@ header > p {
 }
 @media (min-width: 768px) {
   .social {
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 1024px) {
   .social {
-    grid-template-columns: repeat(3, 1fr);
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-gap: 15px;
   }
 }
 @media (min-width: 768px) {
   .social-container {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   }
 }
-@media (min-width: 1024px) {
-  .social-container {
-    padding-bottom: 40px;
-  }
+.social-flex {
+  display: flex;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background: whitesmoke;
+}
+.social-text {
+  padding-left: 20px;
+}
+.social-image {
+  background: #4361ee;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+}
+.social-svg {
+  width: 45px;
+  margin-top: 15px;
 }
 
 @media (min-width: 768px) {
@@ -830,13 +859,16 @@ header > p {
   padding-top: 10px;
   margin: 0 auto;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  height: 70px;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 @media (min-width: 768px) {
   .members-container {
     width: 80%;
+    flex-direction: row;
+    align-items: center;
+    height: 90px;
   }
 }
 @media (min-width: 1024px) {
@@ -848,28 +880,35 @@ header > p {
   border: none;
 }
 .members-container p, .members-container a {
-  font-size: 0.7rem;
-}
-@media (min-width: 768px) {
-  .members-container p, .members-container a {
-    font-size: 0.8rem;
-  }
+  font-size: 0.9rem;
 }
 .members-container p[class=arrow] a {
   font-size: 1.2rem;
-  color: #4333a8;
+  color: #1334d2;
 }
 .members-text {
-  margin-right: auto;
   padding-left: 10px;
-  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 .members-text p {
   margin-bottom: 0;
   margin-top: 0;
+}
+.members-text .hours {
+  font-size: 0.7rem;
+  padding-top: 5px;
+}
+.members-text strong {
+  color: #000;
+}
+@media (min-width: 768px) {
+  .members-text {
+    align-items: flex-start;
+    text-align: left;
+    margin-right: auto;
+  }
 }
 
 @media (min-width: 768px) {
@@ -927,13 +966,6 @@ header > p {
   animation: ring 0.4s ease-out forwards;
 }
 
-.social-image {
-  background: slateblue;
-  border-radius: 50%;
-  width: 75px;
-  height: 75px;
-}
-
 .widget-container-full,
 .widget-container-half {
   width: 95vw;
@@ -950,7 +982,7 @@ header > p {
   }
 }
 .alert-banner {
-  background: slateblue;
+  background: #4361ee;
   margin: 10px;
   border-radius: 5px;
   display: flex;
@@ -1002,19 +1034,19 @@ header > p {
   padding: 10px;
 }
 .traffic-button:hover {
-  background: #57c889;
+  background: #7973d9;
   color: #fff;
   border-radius: 10px;
 }
 .traffic-button:active {
-  background: #57c889;
+  background: #7973d9;
 }
 
 .button-background,
 .initial-button {
   border: none;
   padding: 10px;
-  background: seagreen;
+  background: #3F37C9;
   border-radius: 10px;
   color: #fff;
 }
@@ -1024,29 +1056,38 @@ header > p {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 15px;
   width: 90%;
-  margin: 20px auto;
+  margin: 25px auto;
 }
 
 .button-primary,
-.button-disabled {
+.button-disabled,
+.button-save {
   padding: 15px;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+  border: none;
+}
+.button-primary:active,
+.button-disabled:active,
+.button-save:active {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.button-primary {
-  background-color: slateblue;
+.button-primary,
+.button-save {
+  background-color: #3F37C9;
 }
-.button-primary:hover {
-  background-color: #8d81d9;
+.button-primary:hover,
+.button-save:hover {
+  background-color: #7973d9;
 }
 
 .button-disabled {
-  background-color: seagreen;
+  background-color: #B5179E;
 }
 .button-disabled:hover {
-  background-color: #57c889;
+  background-color: #e533cb;
 }
 
 .toggle-grid {
